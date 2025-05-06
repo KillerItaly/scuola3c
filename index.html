@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nexus Projects | Portfolio dei nostri lavori scolastici</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Nexus Projects</div>
+        <p class="tagline">profetti scolastici del guruppo 3C SIA Di donato Giovanni, Conti Marco, Cocchetti Davide e 3L LSA Carrai Lisa, Babba Ranim</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </nav>
+
+    
+    <section class="projects-preview">
+        <h2 class="section-title">Ultimi progetti</h2>
+        <div class="projects-grid">
+            <a href="pdf/una missione una citta sotteranea1.pdf" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/anteprima-citta-sotterranea.jpg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Città Sotterranea</h3>
+                    <p>Un'avventura scritta da noi</p>
+                </div>
+            </a>
+
+            <a href="pdf/una missione una citta sotteranea secindo finale.pdf" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/anteprima-citta-sotterranea.jpg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Città Sotterranea</h3>
+                    <p>Versione con finale B</p>
+                </div>
+            </a>
+        
+            <a href="https://play.kahoot.it/v2/?quizId=4d4b6acc-7216-4543-aeaf-2123e404ff49&hostId=6154019d-d32b-4bf7-bcc0-97d332b6df7e" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/anteprima-kahoot.jpg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Kahoot</h3>
+                    <p>Quiz interattivo sulla Città Sotterranea</p>
+                    <div class="kahoot-badge">
+                        <i class="fas fa-gamepad"></i> Gioca ora su Kahoot!
+                    </div>
+                </div>
+            </a>
+            
+            <a href="pdf/MELO FRANCO CON INNESTO.pdf" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/anteprima-melo-franco.jpg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Melo Franco</h3>
+                    <p>Progetto di documentazione sul Melo Franco</p>
+                </div>
+            </a>
+        
+            <a href="immagini/primo 2.jpeg" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/primo 2.jpeg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Melo Franco</h3>
+                    <p>Progetto di documentazione sul Melo Franco</p>
+                </div>
+            </a>
+        
+            <a href="immagini/secondo 2.jpeg" class="project-card" target="_blank" rel="noopener">
+                <div class="project-img" style="background-image: url('immagini/secondo 2.jpeg'); background-size: cover;"></div>
+                <div class="project-info">
+                    <h3>Progetto Melo Franco</h3>
+                    <p>Progetto di documentazione sul Melo Franco</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2023 Nexus Projects. Tutti i diritti riservati.</p>
+        <p>Creato con passione dal nostro team 3C SIA e 3L LSA</p>
+    </footer>
+    
+    <!-- Font Awesome per le icone -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Script personalizzato -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleziona solo elementi che esistono
+            const animatables = [
+                ...document.querySelectorAll('header, nav'),
+                ...document.querySelectorAll('.project-card')
+            ];
+            
+            // Imposta lo stato iniziale
+            animatables.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.5s ease-out';
+            });
+    
+            // Attiva l'animazione
+            setTimeout(() => {
+                animatables.forEach((el, i) => {
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 100 * i);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>

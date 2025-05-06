@@ -1,0 +1,209 @@
+:root {
+    --metalic-purple: #6a5acd;
+    --metalic-purple-light: #9370db;
+    --metalic-purple-dark: #483d8b;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--metalic-purple), var(--metalic-purple-dark));
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: var(--gray);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--metalic-purple);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--metalic-purple);
+    color: var(--white);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: var(--metalic-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
+}
+
+.projects-preview {
+    padding: 4rem 2rem;
+    background-color: var(--gray);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--metalic-purple-light);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card {
+    background-color: var(--black);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(106, 90, 205, 0.4);
+}
+
+.project-img {
+    height: 200px;
+    background-color: var(--metalic-purple-dark);
+    background-position: center;
+    background-size: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--metalic-purple-light);
+}
+
+footer {
+    background-color: var(--gray);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--metalic-purple-light);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Aggiungi questo al tuo style.css */
+.kahoot-badge {
+    display: inline-block;
+    background-color: #7b1fa2; /* Colore viola di Kahoot */
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.kahoot-badge i {
+    margin-right: 5px;
+}
+
+.project-card[href*="kahoot.com"]:hover {
+    box-shadow: 0 15px 30px rgba(123, 31, 162, 0.4); /* Ombra con colore Kahoot */
+}
+
+.alternative-endings {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 8px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 0.8em;
+    color: #555;
+}
